@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <!-- Header Group -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>headerCellClass</key>
+            <string>HBPackageNameHeaderCell</string>
+            <key>title</key>
+            <string>Gesture-X 📲</string>
+            <key>footerText</key>
+            <string>Brings fluid iPhone X modern gestures to iPhone 7 Plus (A10 Fusion) on iOS 15.0 – 15.8.x Rootless. Swipe up in any app to go Home, swipe &amp; hold for App Switcher, swipe from top-right for Control Center.</string>
+        </dict>
+
+        <!-- Master Switch -->
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>enabled</string>
+            <key>label</key>
+            <string>Master Gesture Switch</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>bootBanner</string>
+            <key>label</key>
+            <string>On-Screen Proof Banner</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+
+        <!-- Gesture Customization Group -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>Gesture &amp; Home Bar Settings</string>
+            <key>footerText</key>
+            <string>• Hide Home Bar: Hides the bottom grabber line while keeping fluid swipe gestures active (ideal for full-screen gaming like MLBB).
+• Modern Keyboard: Adds iPhone X bottom padding with Globe and Dictation buttons below spacebar.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <false/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>hideHomeBar</string>
+            <key>label</key>
+            <string>Hide Bottom Home Bar</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>modernKeyboard</string>
+            <key>label</key>
+            <string>Modern Bottom Keyboard</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>lockscreenButtons</string>
+            <key>label</key>
+            <string>Lockscreen Torch &amp; Camera</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.gesturex.prefs</string>
+            <key>key</key>
+            <string>hapticFeedback</string>
+            <key>label</key>
+            <string>Swipe Haptic Feedback</string>
+            <key>PostNotification</key>
+            <string>com.gesturex.prefs.changed</string>
+        </dict>
+
+        <!-- Actions & Preview -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>Actions &amp; Preview</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>📲 Test Gesture-X Screen Proof</string>
+            <key>action</key>
+            <string>testHUD</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Restart SpringBoard (Apply)</string>
+            <key>action</key>
+            <string>respring</string>
+        </dict>
+
+        <!-- Project Info -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>Repository Information</string>
+            <key>footerText</key>
+            <string>Gesture-X for repository KwarNu-art/Gesture-X • Rootless arm64</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>GitHub Repository (Gesture-X)</string>
+            <key>action</key>
+            <string>openGitHub</string>
+        </dict>
+    </array>
+    <key>title</key>
+    <string>Gesture-X</string>
+</dict>
+</plist>

@@ -1,0 +1,11 @@
+Package: com.gesturex.tweak
+Name: Gesture-X (iPhone X Gestures for iPhone 7 Plus)
+Depends: mobilesubstrate (>= 0.9.5000)
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Full fluid iPhone X gestures, swipe-up to home, multitasking switcher, bottom home bar affordance, Control Center top-right swipe, and lock screen quick actions for iPhone 7 Plus (A10 Fusion) on iOS 15.0 - 15.8.x Rootless.
+Maintainer: KwarNu-art
+Author: Gesture-X Engineering
+Section: Tweaks
+Tag: purpose::extension, compatible::ios15, compatible::ios16
+SileoDepiction: https://raw.githubusercontent.com/KwarNu-art/Gesture-X/main/depiction.json

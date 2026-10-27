@@ -1,0 +1,59 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://raw.githubusercontent.com/KwarNu-art/Microlab-2/main/assets/banner.png",
+  "tintColor": "#007AFF",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "NovaShield⚡️"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Performance, Thermal & Global Super Fast Charger Engine (A10)"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🚀 Engineered for A10 Fusion & iOS 15.8.x\n\nNovaShield is a production-grade rootless jailbreak tweak specifically designed to eliminate severe thermal throttling, `thermalmonitord` I2C bus hangs, slow charging, and memory pressure stalls during demanding tasks like **Mobile Legends: Bang Bang (MLBB)**, **Telegram group chats**, and **HD video calls**.\n\n---\n\n### ⚡ Key Features (v1.1.0)\n\n* **⚡️ Global Super Fast Charger Engine**: Eliminates slow charging on iPhone 7 Plus by preventing A10 thermal throttling from dropping charging current to 0.8A. Maintains full 2.1A/2.4A fast charging profile.\n* **❄️ Charge Heat Shield**: Automatically freezes heavy background indexing daemons (`backupd`, `suggestd`, `cloudphotod`, `mediaanalysisd`) while connected to power, keeping battery cool (<36°C).\n* **💎 On-Screen Boot Proof Banner**: Displays a sleek Apple-style glassmorphic HUD directly on screen upon respring/boot confirming active hook status.\n* **🌙 Zero Standby Battery Drain**: Automatically hooks `SBBacklightController` and Darwin screen notifications to suspend all CPU telemetry and timers when the screen is locked.\n* **📊 Low-Overhead Mach Telemetry**: Real-time multi-core CPU load calculation directly via Mach kernel `host_processor_info`.\n* **💎 Apple-Style Glassmorphism HUD**: Smooth spring-animated `UIVisualEffectView` HUD alert that slides down when thermal and CPU load spikes.\n* **⚡️ One-Tap 'Boost & Cool' Rescue**: Instantly purges system memory caches, deprioritizes runaway background daemons (`suggestd`, `passd`, `assetd`), and elevates foreground application priority to `QOS_CLASS_USER_INTERACTIVE`.\n* **🎮 Gaming & Telegram Auto-Boost**: Automatically senses MLBB and Telegram entering the foreground and optimizes execution queues.\n* **⚙️ Full Settings Integration**: Custom slider thresholds, toggles, and live HUD preview action inside the iOS Settings app."
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Supported Devices",
+          "text": "iPhone 7 Plus / iPhone 7 (A10 Fusion) & all A9-A15 devices"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS Versions",
+          "text": "iOS 15.0 – 16.x (Rootless)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Types",
+          "text": "Dopamine, Palera1n (Rootless), XinaA15"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Changelog"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Version 1.1.0**\n* ⚡️ Added Global Super Fast Charger engine for iPhone 7 Plus (2.1A-2.4A Turbo mode).\n* ❄️ Added Charge Heat Shield: freezes heavy background daemons during charging.\n* 📱 Fixed Sileo search & visibility: removed role::developer so tweak shows up in standard user mode.\n* 🔄 Added DEBIAN/postinst script for instant SpringBoard respring after install.\n* 💎 Added on-screen proof banner on boot/respring with live status.\n\n**Version 1.0.0**\n* Initial release."
+        }
+      ],
+      "class": "DepictionStackView"
+    }
+  ],
+  "class": "DepictionTabView"
+}

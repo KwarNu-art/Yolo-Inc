@@ -1,0 +1,11 @@
+Package: com.novashield.rescue
+Name: NovaShield (Performance, Thermal & Super Fast Charger)
+Depends: mobilesubstrate (>= 0.9.5000)
+Version: 1.1.0
+Architecture: iphoneos-arm64
+Description: Advanced performance, thermal rescue & Global Super Fast Charger engine for A10 (iPhone 7 Plus). Auto-boosts MLBB & Telegram, bypasses thermal charging throttle, displays on-screen glassmorphic reaction HUD.
+Maintainer: KwarNu-art
+Author: NovaShield Systems
+Section: Tweaks
+Tag: purpose::extension, compatible::ios15, compatible::ios16
+SileoDepiction: https://raw.githubusercontent.com/KwarNu-art/Microlab-2/main/depiction.json

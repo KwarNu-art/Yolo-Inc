@@ -1,0 +1,50 @@
+name: Build and Test GCOOL
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Build & Unit Tests
+    runs-on: macos-14
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.4.app || sudo xcode-select -s /Applications/Xcode_15.2.app || true
+          xcodebuild -version
+
+      - name: 🧪 Run Unit Tests
+        run: |
+          # Detect available iPhone simulator destination
+          DESTINATION=$(xcrun simctl list devices available | grep -m1 "iPhone" | awk -F '[()]' '{print $2}' || echo "platform=iOS Simulator,name=iPhone 15")
+          echo "Using destination: id=$DESTINATION"
+          xcodebuild test \
+            -project GCOOL.xcodeproj \
+            -scheme GCOOL \
+            -destination "id=$DESTINATION" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty || xcodebuild test \
+            -project GCOOL.xcodeproj \
+            -scheme GCOOL \
+            -destination "platform=iOS Simulator,name=iPhone 15" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: 📊 Upload Test Results on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Test-Diagnostics
+          path: |
+            ~/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult

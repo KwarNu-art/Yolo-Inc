@@ -1,0 +1,6 @@
+{
+  "name": "TeleTurbo iOS - Telegram Ultra Performance & Tweak Studio",
+  "description": "Jailbreak tweak suite, automated GitHub Actions CI/CD workflow, and IPA injector to eliminate Telegram iOS lag, stop phone overheating, purge bloat, and freeze background apps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

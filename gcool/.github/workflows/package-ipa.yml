@@ -1,0 +1,97 @@
+name: Package GCOOL IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_release:
+        description: 'Publish official GitHub Release with the IPA'
+        required: false
+        default: false
+        type: boolean
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    name: Package Unsigned Device IPA
+    runs-on: macos-14
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.4.app || sudo xcode-select -s /Applications/Xcode_15.2.app || true
+          xcodebuild -version
+
+      - name: 🔨 Build iOS Generic App Archive
+        run: |
+          mkdir -p build/output
+          xcodebuild build \
+            -project GCOOL.xcodeproj \
+            -scheme GCOOL \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build/derivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES
+
+      - name: 📦 Assemble Payload & Package IPA
+        run: |
+          APP_PATH=$(find build/derivedData -name "GCOOL.app" -type d | head -n 1)
+          echo "Found app binary at: $APP_PATH"
+          test -d "$APP_PATH" || { echo "GCOOL.app not found"; exit 1; }
+
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+
+          # Package IPA
+          zip -qr "GCOOL-v1.0.0-unsigned.ipa" Payload/
+          ls -lh GCOOL-v1.0.0-unsigned.ipa
+
+          # Compute SHA-256 Checksum
+          shasum -a 256 GCOOL-v1.0.0-unsigned.ipa > GCOOL-v1.0.0-unsigned.ipa.sha256
+          cat GCOOL-v1.0.0-unsigned.ipa.sha256
+
+      - name: 🚀 Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GCOOL-iOS-Unsigned-IPA
+          path: |
+            GCOOL-v1.0.0-unsigned.ipa
+            GCOOL-v1.0.0-unsigned.ipa.sha256
+
+      - name: 🏷️ Publish GitHub Release
+        if: ${{ inputs.publish_release == true || startsWith(github.ref, 'refs/tags/v') }}
+        uses: softprops/action-gh-release@v2
+        continue-on-error: true
+        with:
+          tag_name: ${{ github.ref_name || 'v1.0.0' }}
+          name: 'GCOOL Winter Edition v1.0.0'
+          body: |
+            ## ❄️ GCOOL: Native iOS Gaming & Thermal Companion
+
+            Built natively for Apple A10 Fusion (iPhone 7 Plus, 60 Hz, iOS 15.0–15.8.x).
+
+            ### 📦 Artifacts:
+            - **`GCOOL-v1.0.0-unsigned.ipa`**: Unsigned device IPA ready for sideloading via **AltStore, Sideloadly, TrollStore, or Xcode**.
+            - **`GCOOL-v1.0.0-unsigned.ipa.sha256`**: Cryptographic integrity verification hash.
+
+            ### ⚡ Features:
+            - ❄️ **Glacier Winter Cooling Design**: High-contrast dark midnight palette with optional snowfall animation.
+            - 🌡️ **ProcessInfo.ThermalState Monitoring**: Honest real-time thermal pressure tracking (Nominal, Fair, Serious, Critical).
+            - ⏱️ **Wall-Clock Gaming Sessions**: Accurate duration calculations via persisted timestamps with background resumption.
+            - 🎮 **Game Catalog & Pinning**: User-curated favorites with custom URL scheme support and active game pinning.
+            - 🔒 **Guided Access Walkthrough**: Instructions for true single-app hardware lockdown.
+            - 💡 **A10 Fusion Optimization Guide**: Practical brightness, storage headroom, and graphics tuning tips.
+          files: |
+            GCOOL-v1.0.0-unsigned.ipa
+            GCOOL-v1.0.0-unsigned.ipa.sha256
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,59 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://raw.githubusercontent.com/KwarNu-art/Gesture-X/main/assets/banner.png",
+  "tintColor": "#007AFF",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Gesture-X 📲"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "iPhone X Fluid Gestures Engine for iPhone 7 Plus (A10)"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🚀 Modern iPhone X Gestures on iPhone 7 Plus\n\nGesture-X is a production-grade rootless jailbreak tweak engineered specifically for Apple A10 Fusion devices (iPhone 7 Plus running iOS 15.0 – 15.8.x) on **Dopamine** and **Palera1n**. It permanently replaces the physical home button navigation with modern fluid iPhone X gestures across every application.\n\n---\n\n### ⚡ Key Features\n\n* **📲 Universal Swipe Up to Home**: Swipe up from the bottom edge in any application (Telegram, Mobile Legends, Safari, etc.) to immediately return to the Home Screen.\n* **🎛️ Multitasking & App Switcher**: Swipe up and hold to smoothly open the iOS App Switcher card deck.\n* **⚡ Quick App Flicking**: Flick left or right across the bottom edge to instantly switch between recent apps.\n* **📊 Top-Right Control Center**: Pull down from the top-right corner of the display to access Control Center.\n* **🔔 Top-Left Notification Center**: Pull down from the top-left or top-center to pull down the Cover Sheet.\n* **💎 Native Home Bar Affordance**: Sleek bottom pill indicator with optional toggle to hide in games.\n* **⌨️ Modern Bottom Keyboard**: Adds bottom padding beneath spacebar with Globe and Dictation buttons.\n* **🔦 Lockscreen Quick Actions**: Native Flashlight and Camera quick action buttons on the Lock Screen.\n* **⚡ Instant Respring & Proof Banner**: Integrated maintainer script triggers SpringBoard reload upon install and displays an on-screen proof banner!"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Supported Devices",
+          "text": "iPhone 7 Plus / iPhone 7 (A10 Fusion) & all Home-button devices"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS Versions",
+          "text": "iOS 15.0 – 16.x (Rootless)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Types",
+          "text": "Dopamine, Palera1n (Rootless), XinaA15"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Changelog"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Version 1.0.0**\n* Initial release for repository `Gesture-X`.\n* Full fluid gestures: swipe up to home, multitasking, quick app flicking.\n* Top-right Control Center & Top-left Cover Sheet.\n* Lockscreen flashlight & camera buttons.\n* Modern bottom keyboard inset.\n* PreferenceLoader Settings integration & on-screen proof HUD."
+        }
+      ],
+      "class": "DepictionStackView"
+    }
+  ],
+  "class": "DepictionTabView"
+}

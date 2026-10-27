@@ -1,0 +1,68 @@
+name: Gesture-X CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-gesturex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: ⚙️ Setup Theos Suite (Instant Ubuntu Runner)
+        uses: Randomblock1/theos-action@v1
+
+      - name: 🔨 Compile Gesture-X Rootless arm64 Tweak (.deb)
+        run: |
+          chmod +x layout/DEBIAN/postinst || true
+          chmod +x layout/DEBIAN/postrm || true
+          make clean
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          cp packages/*.deb ./GestureX-Rootless-arm64.deb || true
+          ls -la *.deb
+
+      - name: 🚀 Upload Compiled Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: GestureX-iOS-arm64-Build-Artifacts
+          path: |
+            *.deb
+            depiction.json
+
+      - name: 🏷️ Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        continue-on-error: true
+        with:
+          tag_name: v1.0.0-release
+          name: 'Gesture-X Release v1.0.0 (iPhone X Gestures for iPhone 7 Plus)'
+          body: |
+            ## 📲 Gesture-X: iPhone X Fluid Gestures Engine for iPhone 7 Plus
+            
+            Compiled automatically for **@${{ github.repository_owner }}** on repository **Gesture-X**:
+            - **GestureX-Rootless-arm64.deb**: Native 64-bit rootless package for **Dopamine & Palera1n (iOS 15.0 - 16.x)**.
+            
+            ### ✨ Core Features:
+            - 📲 **Universal Swipe Up to Home**: Swipe up from the bottom in any app to smoothly return to SpringBoard.
+            - 🎛️ **Multitasking & App Switcher**: Swipe up and hold to open modern app cards.
+            - ⚡ **Quick App Flicking**: Flick across bottom edge to switch between recent apps.
+            - 📊 **Top-Right Control Center**: Pull down from top-right corner.
+            - 🔔 **Top-Left Notification Center**: Pull down from top-left corner.
+            - 💎 **Bottom Home Bar**: Native rounded home bar indicator with toggle to hide in games.
+            - ⌨️ **Modern Bottom Keyboard**: iPhone X spacing with bottom Globe and Dictation buttons.
+            - 🔦 **Lockscreen Quick Actions**: Native Flashlight and Camera buttons.
+            - 🔄 **Instant Respring on Install**: Integrated postinst reload script for immediate screen activation.
+          files: |
+            *.deb
+            depiction.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

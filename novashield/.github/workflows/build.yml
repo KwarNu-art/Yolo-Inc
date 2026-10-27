@@ -1,0 +1,65 @@
+name: NovaShield CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-novashield:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: ⚙️ Setup Theos Suite (Instant Ubuntu Runner)
+        uses: Randomblock1/theos-action@v1
+
+      - name: 🔨 Compile NovaShield Rootless arm64 Tweak (.deb)
+        run: |
+          chmod +x layout/DEBIAN/postinst || true
+          chmod +x layout/DEBIAN/postrm || true
+          make clean
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          cp packages/*.deb ./NovaShield-Rootless-arm64.deb || true
+          ls -la *.deb
+
+      - name: 🚀 Upload Compiled Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: NovaShield-iOS-arm64-Build-Artifacts
+          path: |
+            *.deb
+            depiction.json
+
+      - name: 🏷️ Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        continue-on-error: true
+        with:
+          tag_name: v1.1.0-rescue
+          name: 'NovaShield Release v1.1.0 (Rootless arm64 + Super Fast Charger)'
+          body: |
+            ## ⚡️ NovaShield: Performance, Thermal & Global Super Fast Charge Engine
+            
+            Compiled automatically for **@${{ github.repository_owner }}** on repository **Microlab-2**:
+            - **NovaShield-Rootless-arm64.deb**: Native 64-bit rootless package for **Dopamine & Palera1n (iOS 15.0 - 16.x)**.
+            
+            ### ✨ Core Highlights (v1.1.0):
+            - 📱 **Sileo Search & Visibility Fixed**: Removed `role::developer` tag so the tweak appears immediately in Sileo search and Installed Tweaks list.
+            - 🔄 **Instant Respring on Install**: Integrated `DEBIAN/postinst` with `sbreload` to restart SpringBoard right after installation.
+            - ⚡️ **Global Super Fast Charger**: Bypasses A10 thermal charging throttling and throttles heavy background daemons to keep battery cool (<36°C) and maintain max 2.1A charging current.
+            - 💎 **Live On-Screen Proof Banner**: SpringBoard immediately displays the Apple-style glassmorphic HUD upon boot/respring confirming NovaShield is active.
+            - 🎮 **MLBB & Telegram Auto-Boost**: Priority execution queues and memory purge for smooth gaming and typing.
+            - ⚙️ **Settings Integration**: Preference pane with customization sliders and live test buttons.
+          files: |
+            *.deb
+            depiction.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

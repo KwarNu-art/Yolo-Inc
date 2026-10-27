@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>entry</key>
+    <dict>
+        <key>bundle</key>
+        <string>PreferenceLoader</string>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>icon</key>
+        <string>icon.png</string>
+        <key>isController</key>
+        <true/>
+        <key>label</key>
+        <string>TeleTurbo⚡ (Telegram Optimizer)</string>
+    </dict>
+    <key>items</key>
+    <array>
+        <!-- Header Group -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>headerCellClass</key>
+            <string>HBPackageNameHeaderCell</string>
+            <key>title</key>
+            <string>TeleTurbo for Telegram iOS</string>
+            <key>footerText</key>
+            <string>Engineered specifically for iPhone 7 Plus (A10 Fusion) &amp; iOS 15+. Eliminates typing lag, stops phone heating, and keeps Telegram running smooth 24/7.</string>
+        </dict>
+
+        <!-- Master Switch -->
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>enabled</string>
+            <key>label</key>
+            <string>Master Tweak Enable</string>
+        </dict>
+
+        <!-- On-Screen Proof Group -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>On-Screen Visual Proof</string>
+            <key>footerText</key>
+            <string>• Live Top-Right FPS Counter: Shows real-time frame rate in Telegram with a green status circle. Tap the circle to see RAM usage &amp; A10 turbo state.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>showFPS</string>
+            <key>label</key>
+            <string>Show FPS Counter in Telegram</string>
+        </dict>
+
+        <!-- iPhone 7 Plus & Performance Features Group -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>iPhone 7 Plus / A10 Fusion Optimizations</string>
+            <key>footerText</key>
+            <string>• Zero-Lag Keyboard: Eliminates the 30-second text freeze when typing into large group chats.
+• Anti-Overheat Shield: Bypasses heavy GPU Gaussian blur shaders to keep the phone chassis cool.
+• Bloat Stripper: Throttles 60 FPS vector Lottie sticker rendering and stops Telegram Stories from hogging 3GB RAM.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>zeroLagTyping</string>
+            <key>label</key>
+            <string>Zero-Lag Keyboard Acceleration</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>antiOverheat</string>
+            <key>label</key>
+            <string>Anti-Thermal Overheat Shield</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>stickerThrottle</string>
+            <key>label</key>
+            <string>Throttle Heavy Lottie Stickers</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.teleturbo.prefs</string>
+            <key>key</key>
+            <string>storyStripper</string>
+            <key>label</key>
+            <string>Strip Telegram Stories Bloat</string>
+        </dict>
+
+        <!-- About / Credits -->
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>title</key>
+            <string>About TeleTurbo</string>
+            <key>footerText</key>
+            <string>Developed for @KwarNu-art. Built for high performance on iPhone 7 Plus, A10 Fusion &amp; iOS 15.x.</string>
+        </dict>
+    </array>
+    <key>title</key>
+    <string>TeleTurbo⚡</string>
+</dict>
+</plist>

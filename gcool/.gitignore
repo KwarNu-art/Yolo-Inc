@@ -1,0 +1,11 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+*.xcbkptlist
+*.ipa
+Payload/
+*.sha256

@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001 /* GCOOLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001 /* GCOOLApp.swift */; };
+		1002 /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002 /* GameItem.swift */; };
+		1003 /* GamingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003 /* GamingSession.swift */; };
+		1004 /* ThermalSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004 /* ThermalSnapshot.swift */; };
+		1005 /* ScreenTimeFeasibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005 /* ScreenTimeFeasibility.swift */; };
+		1006 /* OptimizationTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006 /* OptimizationTip.swift */; };
+		1007 /* DeviceMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007 /* DeviceMonitorService.swift */; };
+		1008 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008 /* SessionManager.swift */; };
+		1009 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009 /* FavoritesStore.swift */; };
+		1010 /* DistractionShieldService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010 /* DistractionShieldService.swift */; };
+		1011 /* GlacierTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011 /* GlacierTheme.swift */; };
+		1012 /* SnowfallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012 /* SnowfallView.swift */; };
+		1013 /* GlacierCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013 /* GlacierCard.swift */; };
+		1014 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014 /* DashboardView.swift */; };
+		1015 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2015 /* GameDetailView.swift */; };
+		1016 /* ApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016 /* ApplicationsView.swift */; };
+		1017 /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017 /* ActiveSessionView.swift */; };
+		1018 /* ThermalBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018 /* ThermalBatteryView.swift */; };
+		1019 /* OptimizationGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019 /* OptimizationGuideView.swift */; };
+		1020 /* GuidedAccessGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020 /* GuidedAccessGuideView.swift */; };
+		1021 /* LimitationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021 /* LimitationsView.swift */; };
+		1022 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022 /* SettingsView.swift */; };
+		1023 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023 /* MainTabView.swift */; };
+		1024 /* SessionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2024 /* SessionManagerTests.swift */; };
+		1025 /* DeviceMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025 /* DeviceMonitorTests.swift */; };
+		1026 /* FavoritesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026 /* FavoritesStoreTests.swift */; };
+		1027 /* FeasibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027 /* FeasibilityTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4001 /* GCOOL */;
+			remoteInfo = GCOOL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2001 /* GCOOLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCOOLApp.swift; sourceTree = "<group>"; };
+		2002 /* GameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
+		2003 /* GamingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamingSession.swift; sourceTree = "<group>"; };
+		2004 /* ThermalSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalSnapshot.swift; sourceTree = "<group>"; };
+		2005 /* ScreenTimeFeasibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeFeasibility.swift; sourceTree = "<group>"; };
+		2006 /* OptimizationTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationTip.swift; sourceTree = "<group>"; };
+		2007 /* DeviceMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMonitorService.swift; sourceTree = "<group>"; };
+		2008 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		2009 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
+		2010 /* DistractionShieldService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistractionShieldService.swift; sourceTree = "<group>"; };
+		2011 /* GlacierTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacierTheme.swift; sourceTree = "<group>"; };
+		2012 /* SnowfallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowfallView.swift; sourceTree = "<group>"; };
+		2013 /* GlacierCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacierCard.swift; sourceTree = "<group>"; };
+		2014 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2015 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		2016 /* ApplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsView.swift; sourceTree = "<group>"; };
+		2017 /* ActiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSessionView.swift; sourceTree = "<group>"; };
+		2018 /* ThermalBatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalBatteryView.swift; sourceTree = "<group>"; };
+		2019 /* OptimizationGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationGuideView.swift; sourceTree = "<group>"; };
+		2020 /* GuidedAccessGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedAccessGuideView.swift; sourceTree = "<group>"; };
+		2021 /* LimitationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitationsView.swift; sourceTree = "<group>"; };
+		2022 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2023 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		2024 /* SessionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerTests.swift; sourceTree = "<group>"; };
+		2025 /* DeviceMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMonitorTests.swift; sourceTree = "<group>"; };
+		2026 /* FavoritesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStoreTests.swift; sourceTree = "<group>"; };
+		2027 /* FeasibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeasibilityTests.swift; sourceTree = "<group>"; };
+		2028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4001 /* GCOOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCOOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4002 /* GCOOLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCOOLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0002 /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				0003 /* GCOOL */,
+				0004 /* GCOOLTests */,
+				0005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0003 /* GCOOL */ = {
+			isa = PBXGroup;
+			children = (
+				0006 /* App */,
+				0007 /* Models */,
+				0008 /* Services */,
+				0009 /* Views */,
+				0010 /* Resources */,
+			);
+			path = GCOOL;
+			sourceTree = "<group>";
+		};
+		0006 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2001 /* GCOOLApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2002 /* GameItem.swift */,
+				2003 /* GamingSession.swift */,
+				2004 /* ThermalSnapshot.swift */,
+				2005 /* ScreenTimeFeasibility.swift */,
+				2006 /* OptimizationTip.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0008 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2007 /* DeviceMonitorService.swift */,
+				2008 /* SessionManager.swift */,
+				2009 /* FavoritesStore.swift */,
+				2010 /* DistractionShieldService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2023 /* MainTabView.swift */,
+				2011 /* GlacierTheme.swift */,
+				2012 /* SnowfallView.swift */,
+				2013 /* GlacierCard.swift */,
+				2014 /* DashboardView.swift */,
+				2015 /* GameDetailView.swift */,
+				2016 /* ApplicationsView.swift */,
+				2017 /* ActiveSessionView.swift */,
+				2018 /* ThermalBatteryView.swift */,
+				2019 /* OptimizationGuideView.swift */,
+				2020 /* GuidedAccessGuideView.swift */,
+				2021 /* LimitationsView.swift */,
+				2022 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0010 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2028 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0004 /* GCOOLTests */ = {
+			isa = PBXGroup;
+			children = (
+				2024 /* SessionManagerTests.swift */,
+				2025 /* DeviceMonitorTests.swift */,
+				2026 /* FavoritesStoreTests.swift */,
+				2027 /* FeasibilityTests.swift */,
+			);
+			path = GCOOLTests;
+			sourceTree = "<group>";
+		};
+		0005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4001 /* GCOOL.app */,
+				4002 /* GCOOLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4001 /* GCOOL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6001 /* Build configuration list for PBXNativeTarget "GCOOL" */;
+			buildPhases = (
+				7001 /* Sources */,
+				5001 /* Frameworks */,
+				8001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCOOL;
+			productName = GCOOL;
+			productReference = 4001 /* GCOOL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4002 /* GCOOLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6002 /* Build configuration list for PBXNativeTarget "GCOOLTests" */;
+			buildPhases = (
+				7002 /* Sources */,
+				5002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9001 /* PBXTargetDependency */,
+			);
+			name = GCOOLTests;
+			productName = GCOOLTests;
+			productReference = 4002 /* GCOOLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 4001;
+					};
+				};
+			};
+			buildConfigurationList = 6000 /* Build configuration list for PBXProject "GCOOL" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0002 /* MainGroup */;
+			productRefGroup = 0005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4001 /* GCOOL */,
+				4002 /* GCOOLTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001 /* GCOOLApp.swift in Sources */,
+				1002 /* GameItem.swift in Sources */,
+				1003 /* GamingSession.swift in Sources */,
+				1004 /* ThermalSnapshot.swift in Sources */,
+				1005 /* ScreenTimeFeasibility.swift in Sources */,
+				1006 /* OptimizationTip.swift in Sources */,
+				1007 /* DeviceMonitorService.swift in Sources */,
+				1008 /* SessionManager.swift in Sources */,
+				1009 /* FavoritesStore.swift in Sources */,
+				1010 /* DistractionShieldService.swift in Sources */,
+				1011 /* GlacierTheme.swift in Sources */,
+				1012 /* SnowfallView.swift in Sources */,
+				1013 /* GlacierCard.swift in Sources */,
+				1014 /* DashboardView.swift in Sources */,
+				1015 /* GameDetailView.swift in Sources */,
+				1016 /* ApplicationsView.swift in Sources */,
+				1017 /* ActiveSessionView.swift in Sources */,
+				1018 /* ThermalBatteryView.swift in Sources */,
+				1019 /* OptimizationGuideView.swift in Sources */,
+				1020 /* GuidedAccessGuideView.swift in Sources */,
+				1021 /* LimitationsView.swift in Sources */,
+				1022 /* SettingsView.swift in Sources */,
+				1023 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1002 /* GameItem.swift in Sources */,
+				1003 /* GamingSession.swift in Sources */,
+				1004 /* ThermalSnapshot.swift in Sources */,
+				1005 /* ScreenTimeFeasibility.swift in Sources */,
+				1006 /* OptimizationTip.swift in Sources */,
+				1007 /* DeviceMonitorService.swift in Sources */,
+				1008 /* SessionManager.swift in Sources */,
+				1009 /* FavoritesStore.swift in Sources */,
+				1010 /* DistractionShieldService.swift in Sources */,
+				1024 /* SessionManagerTests.swift in Sources */,
+				1025 /* DeviceMonitorTests.swift in Sources */,
+				1026 /* FavoritesStoreTests.swift in Sources */,
+				1027 /* FeasibilityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4001 /* GCOOL */;
+			targetProxy = 3001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		60011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GCOOL/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcool.inc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GCOOL/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcool.inc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		60021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcool.inc.GCOOLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCOOL.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GCOOL";
+			};
+			name = Debug;
+		};
+		60022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcool.inc.GCOOLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCOOL.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GCOOL";
+			};
+			name = Release;
+		};
+		60001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6000 /* Build configuration list for PBXProject "GCOOL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60001 /* Debug */,
+				60002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6001 /* Build configuration list for PBXNativeTarget "GCOOL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60011 /* Debug */,
+				60012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6002 /* Build configuration list for PBXNativeTarget "GCOOLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60021 /* Debug */,
+				60022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 0001 /* Project object */;
+}

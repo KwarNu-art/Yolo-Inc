@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+# Gesture-X Post-Installation Script
+# Forces SpringBoard reload immediately upon install in Sileo/Zebra
+
+if [ "$1" = "configure" ]; then
+    if [ -f /var/jb/usr/bin/sbreload ]; then
+        /var/jb/usr/bin/sbreload 2>/dev/null || true
+    elif [ -f /var/jb/usr/bin/killall ]; then
+        /var/jb/usr/bin/killall -9 SpringBoard 2>/dev/null || true
+    else
+        killall -9 SpringBoard 2>/dev/null || true
+    fi
+fi
+
+exit 0

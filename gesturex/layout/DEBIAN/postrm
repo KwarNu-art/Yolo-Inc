@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Gesture-X Post-Removal Script
+if [ "$1" = "remove" ] || [ "$1" = "purge" ]; then
+    if [ -f /var/jb/usr/bin/sbreload ]; then
+        /var/jb/usr/bin/sbreload 2>/dev/null || true
+    else
+        killall -9 SpringBoard 2>/dev/null || true
+    fi
+fi
+
+exit 0
